@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mb-20px {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #556b7e;
+    line-height: 24px;
+}
+
+p {
+    font-size: 12px;
+    color: #5f6878;
+    line-height: 20px;
+}
+
+.outside-container {
+    position: relative;
+    display: flex;
+    background-color: #EDF2F7;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+
+}
+
+div.container-division {
+    
+    position: relative;
+    height: 280px;
+    display: flex;
+    max-width: 730px;
+    border-radius: 10px;
+    background-color:#FFF;
+}
+
+div.img-drawers {
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+    width: 40%;
+    background-image: url(images/drawers.jpg);
+    background-size: cover ;
+}
+
+div.right-content {
+    width: 60%;
+}
+
+div.text-content {
+    padding: 35px 35px 0px;
+}
+
+div.card-content-container {
+    height: 100%;
+}
+
+div.person {
+    padding: 0px 35px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.person-name {
+    display: flex;
+}
+
+div img.avatar {
+    height: 100%;
+    margin-right: 15px;
+}
+
+div.person-name-date {
+    align-items: center;
+}
+
+div.person-name-date p {
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.round-radius {
+    border-radius: 50%;
+}
+
+.share-icon {
+    background-color:#48556B ;
+}
+
+.anchor-share {
+    display: flex;
+}
+
+div.share-btn {
+    cursor: pointer;
+    margin: auto 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color:#EDF2F6;
+    display: flex;
+}
+
+div.share-btn svg {
+    margin: auto;
+    
+}
+
+.mobile-share-module {
+    display: none;
+}
+
+/*desktop share socials innactive*/
+div#share-socials {
+    display: none;
+    visibility: hidden;
+}
+
+div#share-socials.open::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    background-color: #48556a;
+    position: absolute;
+    bottom: -12px;
+    right: 127px;
+}
+
+div#share-socials.open {
+    padding: 0px 40px;
+    display: flex;
+    visibility: visible;
+    position: absolute;
+    background: #48556a;
+    right: -90px;
+    bottom: 90px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+
+
+div.share-icons a  {
+    margin-left: 20px;
+}
+
+.share-icons{
+    display: flex;
+    align-items: center;
+}
+
+.share-icons h3 {
+    color: #9daec2;
+    font-size: 14px;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+div#share-socials-desktop {
+    visibility: hidden;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    background-color: #48556a;
+    left: 540px;
+    bottom: 85px;
+    right: -78px;
+    height: 60px;
+    width: 220px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 850px) {
+
+
+    div.container-division {
+        position: absolute;
+        margin: auto;
+        height: auto;
+        display: inline-block;
+        max-width: 385px;
+        border-radius: 10px;
+        background-color:#FFF;
+    }
+
+    div.right-content {
+        width: 100%;
+        padding: unset;
+        height: auto;
+    }
+
+    div.img-drawers {
+        border-radius: 10px 10px 0 0;
+        height: 255px;
+        width: 100%;
+        background-image: url(images/drawers.jpg);
+        background-size: cover ;
+    }
+
+    div.person {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .mobile-share-module{
+        display: none;
+        visibility: hidden;
+        height: 70px;
+        background-color: blue;
+        transform: translateY(-40px);
+    }
+
+    div#share-socials, div#share-socials.open::after {
+        visibility: hidden;
+        display: none;
+    }
+
+    div#share-socials.open {
+        visibility: visible;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        transform: translateY(-70px);
+        align-items: center;
+        justify-content: center;
+        background-color: #546A7E;
+        z-index: 100;
+        height: 70px;
+        border-radius: 0px 0px 10px 10px;
+        padding: unset;
+        right: unset;
+        bottom: unset;
+    }
+
+
+
+    div.share-icons {
+        padding-bottom: 7px;
+        width: 100%;
+        margin: 0px 35px;
+
+    }
+
+
+
+    div.share-btn {
+        z-index: 10000;
+        cursor: pointer;
+        margin: auto 0;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: #9daec2;
+        display: flex;
+        
+    }
+    
+    div.share-btn svg {
+        margin: auto;
+        fill: #fff;
+    }
+
+}
+
+
+
+
+
+/* https://codingislove.com/css-speech-bubbles/ */
+
+
+/* SOLUTION - https://viyanmd.github.io/Article-Preview-component/ */
